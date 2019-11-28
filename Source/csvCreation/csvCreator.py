@@ -4,7 +4,7 @@ import os
 os.getcwd()
 #%%
 
-def pdfCreation(path, path_csv):
+def csvCreation(path, path_csv):
     df_orange=pd.read_excel(path)
     df_orange.to_csv(path_csv, index = False)
 

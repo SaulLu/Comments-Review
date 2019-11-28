@@ -29,3 +29,14 @@ def clean_moisAnnee_colomn(df):
         raise ValueError("Incorrect data format, should be YYYY-MM-DD")
     return(df2)
 
+def clean_Date de réponse_colomn(df):
+    """
+    Only transform the type of the moisAnnee column to datetime
+    """
+    df2=df
+    try:
+        df2['Date de réponse']=pd.to_datetime(df['Date de réponse'], format='%Y-%m-%d', errors='raise')
+        # do something
+    except ValueError:
+        raise ValueError("Incorrect data format, should be YYYY-MM-DD")
+    return(df2)
