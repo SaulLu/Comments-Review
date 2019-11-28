@@ -29,7 +29,7 @@ def clean_moisAnnee_colomn(df):
         raise ValueError("Incorrect data format, should be YYYY-MM-DD")
     return(df2)
 
-def clean_Date de réponse_colomn(df):
+def clean_Date_reponse_colomn(df):
     """
     Only transform the type of the moisAnnee column to datetime
     """
