@@ -22,11 +22,10 @@ def count_polarity_groupby(dataframe_with_polarity, name_column ):
                             }).reset_index())
 
 
-def plot_pie_chart(values,labels, column_name:str, size=(10,15)):
+def plot_pie_chart(values,labels, size=(10,15)):
     fig, ax = plt.subplots(figsize=size)
     plt.pie(values, labels=labels,autopct='%1.1f%%', counterclock=False, shadow=False)
     plt.show()
-    df.plot.pie(y=column_name, figsize=size)
 
 def plot_bar(df, figsize=(8,4)):
     fig, ax = plt.subplots(figsize=figsize)
