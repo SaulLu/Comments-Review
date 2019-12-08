@@ -5,7 +5,7 @@ import re
 #%%
 def _clean_verbatim(verbatim:str):
     killpunctuation = str.maketrans('', '', r"-()\"#/@;:<>{}-=~|.?,")
-    text = re.sub(r"[-()\"#/@;:<>{}-=~|.?,]","",verbatim)
+    text = re.sub(r"[-()\"#/@;:<>{}=~|.?,]","",verbatim)
     return(text)
 
 def clean_comments_colomn(df):
@@ -23,7 +23,7 @@ def clean_moisAnnee_colomn(df):
     """
     df2=df
     try:
-        df2['MoisAnnee']=pd.to_datetime(df['MoisAnnee'], format='%Y-%m-%d', errors='raise')
+        df2['Annee']=pd.to_datetime(df['Annee'], format='%Y-%m-%d', errors='raise')
         # do something
     except ValueError:
         raise ValueError("Incorrect data format, should be YYYY-MM-DD")

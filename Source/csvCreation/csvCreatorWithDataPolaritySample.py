@@ -5,7 +5,6 @@ import Source.polarizer as polarizer
 import Source.visualizer as visualizer
 import matplotlib.pyplot as plt
 import seaborn as sns
-import csvCreator
 
 def createTreatCsvDateReponse(path,newpath):
     df_orange_sample=pd.read_csv(path)
@@ -27,7 +26,7 @@ def createTreatCsv(path,newpath):
 
 #%%
 #set path : CSV file in Data folders
-path='./Data/OrangeDataSample.csv'
+path='../../Data/OrangeDataSample.csv'
 #%%
 #Data import
 df_orange_sample=pd.read_csv(path)
@@ -51,7 +50,7 @@ df_orange_sample_clean.head()
 
 #%%
 #Download
-df_orange_sample_clean.to_csv('./Data/OrangeDataWithPolaritySample.csv', index = False)
+df_orange_sample_clean.to_csv('../../Data/OrangeDataWithPolaritySample.csv', index = False)
 
 
 
