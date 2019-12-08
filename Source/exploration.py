@@ -4,7 +4,7 @@ import pandas as pd
 import datetime
 
 #%%
-df_orange=pd.read_csv('../Data/OrangeData.csv')
+df_orange=pd.read_csv('./Data/OrangeData.csv')
 
 #%%
 #Sample extraction of the dataset to help us build our functions
@@ -27,6 +27,7 @@ df_orange_sample.describe()
 df_orange_sample.dtypes
 
 # %%
+df_orange_sample["Libellé de la question du Verbatim"].unique()
 
 # %%
 for moisAnnee in df_orange_sample["MoisAnnee"]:

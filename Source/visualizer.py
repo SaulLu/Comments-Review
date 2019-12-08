@@ -1,11 +1,10 @@
-import pandas as pd
+import pandas as pandas
 import matplotlib.pyplot as plt
 import seaborn as sns
 from wordcloud import WordCloud, STOPWORDS
 stopwords = set(STOPWORDS)
 
-df_seul = pd.read_csv('../Data/OrangeData.csv')
-df_sample_poarity = pd.read_csv('../Data/OrangeDataWithPolaritySample.csv')
+
 def count_number_sondage(dataframe):
     return(dataframe[["Verbatim", "Nom du sondage"]].groupby("Nom du sondage").agg("count").rename(columns={
         "Verbatim": "count"}))
