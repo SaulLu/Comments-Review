@@ -9,7 +9,8 @@ nlp = spacy.load('fr_core_news_md')
 list_types = ['VERB', 'NOUN', 'ADJ']
 
 def compute_important_word(string, i) :
-    print(i)
+    if (i%1000==0):
+        print(i)
     important_words = []
     doc = nlp(string)
     for word in doc :
